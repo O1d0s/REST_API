@@ -17,4 +17,12 @@ public class GrettingService {
     public int getGretting(Integer id){
         return body.get(id).amount();
     }
+
+    public void deleteGretting(Integer id){
+        body.remove(id);
+    }
+
+    public void updateGretting(Integer id, Gretting gretting){
+        body.replace(id, gretting);
+    }
 }
